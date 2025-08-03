@@ -32,12 +32,22 @@ export default function HomePage() {
       {users.length === 0 ? (
         <p>No users found.</p>
       ) : (
-        <ul>
+        <ul className="user-list">
           {users.map(user => (
-            <li key={user.id}>
-              <strong>{user.name}</strong>
-              <br />
-              {user.email}
+            <li key={user.id} className="user-card">
+              <img 
+                src={user.imageUrl} 
+                alt={user.name + ' profile'} 
+                className="user-image"
+                style={{ width: '80px', height: '80px', borderRadius: '50%' }}
+              />
+              <div className="user-info">
+                <strong>{user.name}</strong>
+                <p>{user.description}</p>
+                <a href={user.profileUrl} target="_blank" rel="noopener noreferrer">
+                  <span role="img" aria-label="profile">🔗</span> Personal Page
+                </a>
+              </div>
             </li>
           ))}
         </ul>
