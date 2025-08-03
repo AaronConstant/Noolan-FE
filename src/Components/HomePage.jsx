@@ -35,7 +35,7 @@ export default function HomePage() {
         <ul>
           {users.map(user => (
             <li key={user.id}>
-              <strong>{user.name}</strong> {/* Adjust field names as needed */}
+              <strong>{user.name}</strong>
               <br />
               {user.email}
             </li>
