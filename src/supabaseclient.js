@@ -1,8 +1,7 @@
 import {createClient} from "@supabase/supabase-js"
 
-const supaseURL = import.meta.env.URL
-const supabase_API_KEY= import.meta.env.API_KEY
-
+const supaseURL = import.meta.env.VITE_URL
+const supabase_API_KEY= import.meta.env.VITE_API_KEY
 console.log("URL: ",supaseURL)
 console.log("KEY: ", supabase_API_KEY)
 
