@@ -5,18 +5,17 @@ import { Routes, Route } from 'react-router'
 import EditUser from './Components/EditUser'
 import NewUser from './Components/NewUser'
 import ViewAllUsers from './Components/ViewAllUsers'
-import AddUser from './Components/AddUser'
-
+import HomePage from './Components/HomePage'
 
 function App() {
 
   return (
     <>
      <Routes>
-      <Route element={<AddUser/>}/>
-      <Route element={<EditUser/>}/>
-      <Route element={<NewUser/>}/>
-      <Route element={<ViewAllUsers/>}/>
+      <Route path='/' element={<HomePage/>}/>
+      <Route path='edit/:id'element={<EditUser/>}/>
+      <Route path='/add'element={<NewUser/>}/>
+      <Route path='/view'element={<ViewAllUsers/>}/>
      </Routes>
     </>
   )
